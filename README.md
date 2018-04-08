@@ -1,2 +1,2 @@
-# cpp_support
-Headers for namespace and extern macros
+# common_headers
+Headers for namespace, extern macros, and .so visibility
