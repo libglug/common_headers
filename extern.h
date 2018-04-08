@@ -18,4 +18,4 @@
     #define GLUG_EXTERN_END
   #endif
 
-#endif
+#endif // __cplusplus
