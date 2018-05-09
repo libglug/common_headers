@@ -4,10 +4,6 @@
 
     #define GLUG_LIB_API __declspec (dllimport)
 
-  #elif defined (__linux__)
-
-    #define GLUG_LIB_API __attribute__ ((visibility ("default")))
-
   #elif defined (__APPLE__) && defined (__MACH__)
     #include <TargetConditionals.h>
 
@@ -16,6 +12,10 @@
       #define GLUG_LIB_API __attribute__ ((visibility ("default")))
 
     #endif
+
+  #elif defined (__linux__)
+
+    #define GLUG_LIB_API __attribute__ ((visibility ("default")))
 
   #endif
 
