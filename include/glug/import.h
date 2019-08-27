@@ -1,27 +1,19 @@
+#include "os.h"
+
 #ifndef GLUG_LIB_API
-    #ifdef GLUG_STATIC
-
-        #define GLUG_LIB_API
-
-    #else
-        #if defined (WIN32) || defined (_WIN32) || defined (WIN64) || defined (_WIN64)
+    #ifndef GLUG_STATIC
+        #if defined(GLUG_OS_WIN)
 
             #define GLUG_LIB_API __declspec (dllimport)
 
-        #elif defined (__APPLE__) && defined (__MACH__)
-            #include <TargetConditionals.h>
-
-            #if TARGET_OS_MAC == 1
-
-                #define GLUG_LIB_API __attribute__ ((visibility ("default")))
-
-            #endif
-
-        #elif defined (__linux__)
+        #elif defined(GLUG_OS_MAC) || defined(GLUG_OS_LIN) || defined(GLUG_OS_BSD)
 
             #define GLUG_LIB_API __attribute__ ((visibility ("default")))
 
         #endif
+    #else
+
+        #define GLUG_LIB_API
 
     #endif // GLUG_STATIC
 
