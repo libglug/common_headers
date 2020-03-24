@@ -1,10 +1,9 @@
 #ifndef __cplusplus
 
     #include <stdbool.h>
-    #define glug_bool bool
-
-#else
-
-    #define glug_bool bool
 
 #endif
+
+#define glug_bool bool
+#define glug_true true
+#define glug_false false
