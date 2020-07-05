@@ -1,6 +1,6 @@
 #define GLUG_OS_UNK 0
 #define GLUG_OS_WIN 1
-#define GLUG_OS_MAC 2
+#define GLUG_OS_OSX 2
 #define GLUG_OS_LIN 3
 #define GLUG_OS_BSD 4
 
@@ -11,11 +11,11 @@
 #elif defined(__APPLE__) && defined(__MACH__)
 
     #include <TargetConditionals.h>
-    #if TARGET_OS_MAC == 1
+    #if TARGET_OS_OSX == 1
 
-        #define GLUG_OS GLUG_OS_MAC
+        #define GLUG_OS GLUG_OS_OSX
 
-    #endif // TARGET_OS_MAC
+    #endif
 
 #elif defined(__linux__)
 
