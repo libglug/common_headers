@@ -4,6 +4,6 @@
 
 #endif
 
-#define glug_bool bool
+typedef bool glug_bool;
 #define glug_true true
 #define glug_false false
