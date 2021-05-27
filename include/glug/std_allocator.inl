@@ -14,7 +14,7 @@ static void std_free(void *block, void *context)
     free(block);
 }
 
-struct glug_allocator std_allocator =
+static struct glug_allocator std_allocator =
 {
     std_alloc,
     std_free,
