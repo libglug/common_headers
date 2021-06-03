@@ -8,6 +8,12 @@ static void *std_alloc(size_t nbytes, void *context)
     return malloc(nbytes);
 }
 
+static void *std_realloc(void *block, size_t nbytes, void *context)
+{
+    (void) context;
+    return realloc(block, nbytes);
+}
+
 static void std_free(void *block, void *context)
 {
     (void) context;
