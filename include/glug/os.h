@@ -1,11 +1,10 @@
-#define GLUG_OS_UNK 0
-#define GLUG_OS_WIN 1
-#define GLUG_OS_OSX 2
-#define GLUG_OS_LIN 3
-#define GLUG_OS_BSD 4
+#define GLUG_OS_WIN   1
+#define GLUG_OS_OSX   2
+#define GLUG_OS_LIN   3
+#define GLUG_OS_BSD   4
 #define GLUG_OS_HAIKU 5
 
-#if defined(WIN32) || defined(_WIN32) || defined(WIN64) || defined(_WIN64)
+#if defined(_WIN32) || defined(_WIN64)
 
     #define GLUG_OS GLUG_OS_WIN
 
@@ -34,9 +33,5 @@
 #elif defined(__HAIKU__)
 
     #define GLUG_OS GLUG_OS_HAIKU
-
-#else
-
-    #define GLUG_OS GLUG_OS_UNK
 
 #endif
